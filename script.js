@@ -215,7 +215,8 @@ successModal.addEventListener("click", (e) => {
 });
 
 // Close modal with X button
-document.querySelector(".close-modal").addEventListener("click", closeModal);
+const closeBtn = document.querySelector(".close-modal");
+if (closeBtn) closeBtn.addEventListener("click", closeModal);
 
 // Community tabs functionality
 const tabButtons = document.querySelectorAll(".tab-btn");
