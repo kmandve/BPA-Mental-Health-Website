@@ -79,9 +79,17 @@ document.querySelectorAll("[data-aos]").forEach((el) => {
 const appointmentForm = document.getElementById("appointmentForm");
 const successModal = document.getElementById("successModal");
 
-// Set minimum date to today
+// Set minimum date to today (in local timezone)
 const dateInput = document.getElementById("date");
-const today = new Date().toISOString().split("T")[0];
+// Get today's date in local timezone, not UTC
+function getLocalTodayString() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+const today = getLocalTodayString();
 dateInput.setAttribute("min", today);
 
 // Proper form validation function
@@ -90,6 +98,9 @@ function validateForm() {
   const requiredFields = appointmentForm.querySelectorAll("[required]");
 
   requiredFields.forEach((field) => {
+    // Track individual field validity separately from overall form validity
+    let fieldIsValid = true;
+
     // Remove previous error styling
     field.style.borderColor = "#e5e7eb";
 
@@ -99,6 +110,7 @@ function validateForm() {
 
     if (isEmpty) {
       field.style.borderColor = "#ef4444";
+      fieldIsValid = false;
       isValid = false;
     } else {
       // Additional validation for specific field types
@@ -106,20 +118,42 @@ function validateForm() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(value)) {
           field.style.borderColor = "#ef4444";
+          fieldIsValid = false;
           isValid = false;
         }
       }
 
       if (field.type === "date" && value) {
-        const selectedDate = new Date(value);
-        const todayDate = new Date(today);
+        // Compare dates in local timezone to avoid UTC timezone issues
+        // Parse the selected date string (YYYY-MM-DD) in local timezone
+        const selectedDateParts = value.split("-");
+        const selectedDate = new Date(
+          parseInt(selectedDateParts[0]),
+          parseInt(selectedDateParts[1]) - 1,
+          parseInt(selectedDateParts[2])
+        );
+
+        // Get today's date in local timezone
+        const now = new Date();
+        const todayDate = new Date(
+          now.getFullYear(),
+          now.getMonth(),
+          now.getDate()
+        );
+
+        // Compare only the date portion (set time to midnight for both)
+        selectedDate.setHours(0, 0, 0, 0);
+        todayDate.setHours(0, 0, 0, 0);
+
         if (selectedDate < todayDate) {
           field.style.borderColor = "#ef4444";
+          fieldIsValid = false;
           isValid = false;
         }
       }
 
-      if (isValid) {
+      // Apply green border based on individual field validity, not overall form validity
+      if (fieldIsValid) {
         field.style.borderColor = "#10b981";
       }
     }
