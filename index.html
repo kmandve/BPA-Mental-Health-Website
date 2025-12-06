@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindful Journey - Mental Health Awareness & Support</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">🧠</span>
+          <span class="logo-text">Mindful Journey</span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#disorders" class="nav-link">Disorders</a></li>
+          <li><a href="#resources" class="nav-link">Resources</a></li>
+          <li><a href="#appointments" class="nav-link">Appointments</a></li>
+          <li><a href="#community" class="nav-link">Community</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title-line">Your Mental Health</span>
+          <span class="title-line">Matters</span>
+        </h1>
+        <p class="hero-subtitle">
+          Breaking the stigma, building hope, one step at a time
+        </p>
+        <div class="hero-buttons">
+          <a href="#appointments" class="btn btn-primary">Get Help Now</a>
+          <a href="#disorders" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mental Health Disorders Section -->
+    <section id="disorders" class="disorders-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Understanding Mental Health</h2>
+          <p class="section-subtitle">
+            Knowledge is the first step toward healing
+          </p>
+        </div>
+        <div class="disorders-grid">
+          <div class="disorder-card" data-aos="fade-up">
+            <div class="card-icon">😰</div>
+            <h3>Anxiety Disorders</h3>
+            <p class="disorder-description">
+              Anxiety disorders involve excessive fear, worry, or nervousness
+              that can interfere with daily activities. Common types include
+              generalized anxiety disorder, panic disorder, and social anxiety
+              disorder.
+            </p>
+            <div class="symptoms-list">
+              <h4>Common Symptoms:</h4>
+              <ul>
+                <li>Excessive worry or fear</li>
+                <li>Restlessness or feeling on edge</li>
+                <li>Difficulty concentrating</li>
+                <li>Physical symptoms (rapid heartbeat, sweating)</li>
+                <li>Sleep disturbances</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="prevalence">Affects ~31% of adults</span>
+            </div>
+          </div>
+
+          <div class="disorder-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-icon">😔</div>
+            <h3>Depression</h3>
+            <p class="disorder-description">
+              Depression is a mood disorder that causes persistent feelings of
+              sadness, loss of interest, and can affect how you think, feel, and
+              handle daily activities.
+            </p>
+            <div class="symptoms-list">
+              <h4>Common Symptoms:</h4>
+              <ul>
+                <li>Persistent sad or empty mood</li>
+                <li>Loss of interest in activities</li>
+                <li>Changes in appetite or weight</li>
+                <li>Fatigue or loss of energy</li>
+                <li>Feelings of worthlessness or guilt</li>
+                <li>Difficulty making decisions</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="prevalence">Affects ~21% of adults</span>
+            </div>
+          </div>
+
+          <div class="disorder-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-icon">🔄</div>
+            <h3>Bipolar Disorder</h3>
+            <p class="disorder-description">
+              Bipolar disorder causes unusual shifts in mood, energy, activity
+              levels, and the ability to carry out day-to-day tasks. It includes
+              periods of mania and depression.
+            </p>
+            <div class="symptoms-list">
+              <h4>Common Symptoms:</h4>
+              <ul>
+                <li>Mood swings (highs and lows)</li>
+                <li>Changes in energy levels</li>
+                <li>Impulsive behavior during manic episodes</li>
+                <li>Depressive episodes</li>
+                <li>Sleep pattern changes</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="prevalence">Affects ~2.8% of adults</span>
+            </div>
+          </div>
+
+          <div class="disorder-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-icon">🧩</div>
+            <h3>PTSD</h3>
+            <p class="disorder-description">
+              Post-Traumatic Stress Disorder can develop after experiencing or
+              witnessing a traumatic event. It can cause flashbacks, nightmares,
+              and severe anxiety.
+            </p>
+            <div class="symptoms-list">
+              <h4>Common Symptoms:</h4>
+              <ul>
+                <li>Flashbacks or nightmares</li>
+                <li>Avoidance of trauma reminders</li>
+                <li>Negative thoughts and mood</li>
+                <li>Hypervigilance</li>
+                <li>Sleep disturbances</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="prevalence">Affects ~6.8% of adults</span>
+            </div>
+          </div>
+
+          <div class="disorder-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-icon">🍽️</div>
+            <h3>Eating Disorders</h3>
+            <p class="disorder-description">
+              Eating disorders are serious mental health conditions
+              characterized by unhealthy eating behaviors and preoccupation with
+              food, body weight, and shape.
+            </p>
+            <div class="symptoms-list">
+              <h4>Common Symptoms:</h4>
+              <ul>
+                <li>Extreme restriction of food intake</li>
+                <li>Binge eating episodes</li>
+                <li>Purging behaviors</li>
+                <li>Preoccupation with body image</li>
+                <li>Distorted body perception</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="prevalence">Affects ~9% of population</span>
+            </div>
+          </div>
+
+          <div class="disorder-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="card-icon">🧘</div>
+            <h3>OCD</h3>
+            <p class="disorder-description">
+              Obsessive-Compulsive Disorder involves unwanted, intrusive
+              thoughts (obsessions) and repetitive behaviors (compulsions) that
+              interfere with daily life.
+            </p>
+            <div class="symptoms-list">
+              <h4>Common Symptoms:</h4>
+              <ul>
+                <li>Obsessive thoughts or fears</li>
+                <li>Compulsive behaviors or rituals</li>
+                <li>Difficulty controlling thoughts</li>
+                <li>Time-consuming rituals</li>
+                <li>Distress when rituals are prevented</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="prevalence">Affects ~2.3% of adults</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources & Helplines Section -->
+    <section id="resources" class="resources-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Crisis Resources & Helplines</h2>
+          <p class="section-subtitle">
+            Immediate help is available 24/7. You are not alone.
+          </p>
+        </div>
+        <div class="resources-grid">
+          <div class="resource-card emergency" data-aos="zoom-in">
+            <div class="resource-icon">🚨</div>
+            <h3>Emergency Services</h3>
+            <p class="resource-number">911</p>
+            <p class="resource-description">
+              For immediate life-threatening emergencies
+            </p>
+          </div>
+
+          <div class="resource-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="resource-icon">📞</div>
+            <h3>988 Suicide & Crisis Lifeline</h3>
+            <p class="resource-number">988</p>
+            <p class="resource-description">
+              Free, confidential support 24/7 for people in distress
+            </p>
+            <a href="tel:988" class="resource-link">Call Now</a>
+          </div>
+
+          <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="resource-icon">💬</div>
+            <h3>Crisis Text Line</h3>
+            <p class="resource-number">Text HOME to 741741</p>
+            <p class="resource-description">
+              Free 24/7 crisis support via text message
+            </p>
+            <a href="sms:741741&body=HOME" class="resource-link">Text Now</a>
+          </div>
+
+          <div class="resource-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="resource-icon">🏥</div>
+            <h3>National Alliance on Mental Illness (NAMI)</h3>
+            <p class="resource-number">1-800-950-NAMI (6264)</p>
+            <p class="resource-description">
+              Information, referrals, and support Monday-Friday, 10am-6pm ET
+            </p>
+            <a href="tel:18009506264" class="resource-link">Call Now</a>
+          </div>
+
+          <div class="resource-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="resource-icon">👥</div>
+            <h3>Substance Abuse & Mental Health Services Administration</h3>
+            <p class="resource-number">1-800-662-HELP (4357)</p>
+            <p class="resource-description">
+              24/7 treatment referral and information service
+            </p>
+            <a href="tel:18006624357" class="resource-link">Call Now</a>
+          </div>
+
+          <div class="resource-card" data-aos="zoom-in" data-aos-delay="500">
+            <div class="resource-icon">🏛️</div>
+            <h3>Veterans Crisis Line</h3>
+            <p class="resource-number">1-800-273-8255, Press 1</p>
+            <p class="resource-description">
+              Confidential support for veterans and their families
+            </p>
+            <a href="tel:18002738255" class="resource-link">Call Now</a>
+          </div>
+        </div>
+
+        <div class="additional-resources">
+          <h3>Additional Resources</h3>
+          <div class="resources-list">
+            <div class="resource-item">
+              <strong>National Institute of Mental Health (NIMH):</strong>
+              <a href="https://www.nimh.nih.gov" target="_blank"
+                >www.nimh.nih.gov</a
+              >
+            </div>
+            <div class="resource-item">
+              <strong>Mental Health America:</strong>
+              <a href="https://www.mhanational.org" target="_blank"
+                >www.mhanational.org</a
+              >
+            </div>
+            <div class="resource-item">
+              <strong>American Psychological Association:</strong>
+              <a href="https://www.apa.org" target="_blank">www.apa.org</a>
+            </div>
+            <div class="resource-item">
+              <strong>Anxiety and Depression Association of America:</strong>
+              <a href="https://adaa.org" target="_blank">adaa.org</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment Scheduler Section -->
+    <section id="appointments" class="appointments-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Schedule a Counseling Session</h2>
+          <p class="section-subtitle">
+            Take the first step toward healing. Book your appointment today.
+          </p>
+        </div>
+        <div class="appointment-container">
+          <div class="appointment-form-wrapper" data-aos="fade-right">
+            <form class="appointment-form" id="appointmentForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="preference">Session Type</label>
+                <select id="preference" name="preference" required>
+                  <option value="">Select session type</option>
+                  <option value="individual">Individual Therapy</option>
+                  <option value="group">Group Therapy</option>
+                  <option value="couples">Couples Therapy</option>
+                  <option value="family">Family Therapy</option>
+                  <option value="online">Online Counseling</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="form-group">
+                <label for="time">Preferred Time</label>
+                <select id="time" name="time" required>
+                  <option value="">Select time</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="concern">Primary Concern (Optional)</label>
+                <textarea
+                  id="concern"
+                  name="concern"
+                  rows="4"
+                  placeholder="Briefly describe what you'd like to discuss..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                Schedule Appointment
+              </button>
+            </form>
+          </div>
+          <div class="appointment-info" data-aos="fade-left">
+            <h3>What to Expect</h3>
+            <div class="info-item">
+              <div class="info-icon">✓</div>
+              <div>
+                <h4>Confidential & Safe</h4>
+                <p>
+                  All sessions are completely confidential and conducted in a
+                  safe, judgment-free environment.
+                </p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">✓</div>
+              <div>
+                <h4>Licensed Professionals</h4>
+                <p>
+                  Our team consists of licensed therapists, counselors, and
+                  mental health professionals.
+                </p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">✓</div>
+              <div>
+                <h4>Flexible Options</h4>
+                <p>
+                  Choose from in-person, online, or hybrid sessions that fit
+                  your schedule and comfort level.
+                </p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">✓</div>
+              <div>
+                <h4>Insurance Accepted</h4>
+                <p>
+                  We accept most major insurance plans and offer sliding scale
+                  fees for those in need.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Support Community</h2>
+          <p class="section-subtitle">
+            Connect with others who understand. You don't have to face this
+            alone.
+          </p>
+        </div>
+        <div class="community-tabs">
+          <button class="tab-btn active" data-tab="forums">Forums</button>
+          <button class="tab-btn" data-tab="chat">Chat Rooms</button>
+        </div>
+        <div class="tab-content active" id="forums">
+          <div class="forums-container">
+            <div class="forum-categories">
+              <div class="category-card" data-aos="fade-up">
+                <div class="category-icon">💬</div>
+                <h3>General Discussion</h3>
+                <p>Share experiences and support each other</p>
+                <span class="post-count">1,234 posts</span>
+              </div>
+              <div
+                class="category-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="category-icon">😰</div>
+                <h3>Anxiety Support</h3>
+                <p>Connect with others managing anxiety</p>
+                <span class="post-count">856 posts</span>
+              </div>
+              <div
+                class="category-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="category-icon">😔</div>
+                <h3>Depression Support</h3>
+                <p>A safe space for depression discussions</p>
+                <span class="post-count">1,089 posts</span>
+              </div>
+              <div
+                class="category-card"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="category-icon">🤝</div>
+                <h3>Recovery Stories</h3>
+                <p>Share your journey and inspire others</p>
+                <span class="post-count">642 posts</span>
+              </div>
+              <div
+                class="category-card"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="category-icon">💡</div>
+                <h3>Coping Strategies</h3>
+                <p>Tips and techniques that work</p>
+                <span class="post-count">923 posts</span>
+              </div>
+              <div
+                class="category-card"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <div class="category-icon">❓</div>
+                <h3>Questions & Advice</h3>
+                <p>Ask questions and get support</p>
+                <span class="post-count">1,567 posts</span>
+              </div>
+            </div>
+            <div class="recent-posts">
+              <h3>Recent Discussions</h3>
+              <div class="post-item">
+                <div class="post-avatar">A</div>
+                <div class="post-content">
+                  <h4>First therapy session tomorrow - nervous but hopeful</h4>
+                  <p>
+                    I finally took the step to book an appointment. Any advice
+                    for a first-timer?
+                  </p>
+                  <div class="post-meta">
+                    <span>Posted 2 hours ago</span>
+                    <span>15 replies</span>
+                  </div>
+                </div>
+              </div>
+              <div class="post-item">
+                <div class="post-avatar">B</div>
+                <div class="post-content">
+                  <h4>Meditation has been a game-changer for my anxiety</h4>
+                  <p>
+                    Wanted to share what's been working for me. Happy to answer
+                    questions!
+                  </p>
+                  <div class="post-meta">
+                    <span>Posted 5 hours ago</span>
+                    <span>32 replies</span>
+                  </div>
+                </div>
+              </div>
+              <div class="post-item">
+                <div class="post-avatar">C</div>
+                <div class="post-content">
+                  <h4>Support group meeting this Saturday</h4>
+                  <p>
+                    Anyone interested in joining? We meet weekly and it's been
+                    incredibly helpful.
+                  </p>
+                  <div class="post-meta">
+                    <span>Posted 1 day ago</span>
+                    <span>8 replies</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="chat">
+          <div class="chat-container">
+            <div class="chat-rooms">
+              <div class="chat-room-card" data-aos="zoom-in">
+                <div class="room-icon">🌅</div>
+                <h3>Morning Support</h3>
+                <p>Start your day with positive energy</p>
+                <span class="online-count">24 online</span>
+                <button class="join-btn">Join Room</button>
+              </div>
+              <div
+                class="chat-room-card"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="room-icon">🌙</div>
+                <h3>Evening Reflection</h3>
+                <p>Wind down and share your day</p>
+                <span class="online-count">18 online</span>
+                <button class="join-btn">Join Room</button>
+              </div>
+              <div
+                class="chat-room-card"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div class="room-icon">💪</div>
+                <h3>Recovery Warriors</h3>
+                <p>For those actively working on recovery</p>
+                <span class="online-count">31 online</span>
+                <button class="join-btn">Join Room</button>
+              </div>
+              <div
+                class="chat-room-card"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <div class="room-icon">🎨</div>
+                <h3>Creative Expression</h3>
+                <p>Share art, writing, and creative outlets</p>
+                <span class="online-count">12 online</span>
+                <button class="join-btn">Join Room</button>
+              </div>
+            </div>
+            <div class="chat-guidelines">
+              <h3>Community Guidelines</h3>
+              <ul>
+                <li>✓ Be respectful and kind to all members</li>
+                <li>
+                  ✓ Maintain confidentiality - don't share others' stories
+                </li>
+                <li>
+                  ✓ No medical advice - share experiences, not prescriptions
+                </li>
+                <li>✓ Report any concerning behavior to moderators</li>
+                <li>
+                  ✓ Remember: this is a support space, not a replacement for
+                  professional help
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Mental Health Blog</h2>
+          <p class="section-subtitle">
+            Evidence-based articles, tips, and insights
+          </p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card featured" data-aos="fade-up">
+            <div class="blog-image">
+              <div class="blog-tag">Featured</div>
+            </div>
+            <div class="blog-content">
+              <span class="blog-date">March 15, 2024</span>
+              <h3>Understanding the Stigma: Why Mental Health Matters</h3>
+              <p>
+                Mental health stigma remains one of the biggest barriers to
+                seeking help. This comprehensive guide explores the roots of
+                stigma, its impact, and how we can work together to break it
+                down...
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-image image-2"></div>
+            <div class="blog-content">
+              <span class="blog-date">March 12, 2024</span>
+              <h3>5 Evidence-Based Coping Strategies for Anxiety</h3>
+              <p>
+                Learn about proven techniques including deep breathing,
+                progressive muscle relaxation, and cognitive restructuring that
+                can help manage anxiety symptoms...
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blog-image image-3"></div>
+            <div class="blog-content">
+              <span class="blog-date">March 10, 2024</span>
+              <h3>The Science of Depression: What Research Tells Us</h3>
+              <p>
+                Explore the latest research on depression, including
+                neurobiological factors, environmental influences, and effective
+                treatment approaches...
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-image image-4"></div>
+            <div class="blog-content">
+              <span class="blog-date">March 8, 2024</span>
+              <h3>How to Support a Loved One with Mental Health Challenges</h3>
+              <p>
+                Practical advice for family and friends on how to provide
+                meaningful support while maintaining healthy boundaries...
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="blog-image image-5"></div>
+            <div class="blog-content">
+              <span class="blog-date">March 5, 2024</span>
+              <h3>Mindfulness and Meditation: A Beginner's Guide</h3>
+              <p>
+                Discover how mindfulness practices can improve mental
+                well-being, reduce stress, and enhance overall quality of
+                life...
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="blog-image image-6"></div>
+            <div class="blog-content">
+              <span class="blog-date">March 3, 2024</span>
+              <h3>When to Seek Professional Help: Recognizing the Signs</h3>
+              <p>
+                Learn to identify when professional mental health support is
+                needed and how to take that important first step...
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Stories of Hope</h2>
+          <p class="section-subtitle">
+            Real stories from real people who found their path to healing
+          </p>
+        </div>
+        <div class="testimonials-slider">
+          <div class="testimonial-card active" data-aos="fade-up">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                After years of struggling with anxiety, I finally reached out
+                for help. Therapy wasn't easy, but it changed my life. I learned
+                tools to manage my anxiety and discovered that asking for help
+                isn't a weakness—it's strength. Today, I'm living a life I never
+                thought possible.
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">S</div>
+                <div class="author-info">
+                  <h4>Sarah M.</h4>
+                  <span>Recovered from Anxiety Disorder</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-aos="fade-up">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                Depression made me feel like I was drowning, and I couldn't see
+                a way out. With the support of my therapist and this community,
+                I found hope again. Medication, therapy, and connecting with
+                others who understood made all the difference. Recovery is
+                possible.
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">J</div>
+                <div class="author-info">
+                  <h4>James R.</h4>
+                  <span>Recovered from Major Depression</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-aos="fade-up">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                I was skeptical about therapy at first, but it turned out to be
+                the best decision I ever made. Learning about my PTSD and
+                working through trauma with a professional helped me reclaim my
+                life. I'm now able to have healthy relationships and enjoy life
+                again.
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">M</div>
+                <div class="author-info">
+                  <h4>Maria L.</h4>
+                  <span>Recovered from PTSD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-aos="fade-up">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                The support community here gave me the courage to seek
+                professional help. Reading others' stories made me realize I
+                wasn't alone. Now, two years into recovery, I'm sharing my story
+                to give others the same hope I found.
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">D</div>
+                <div class="author-info">
+                  <h4>David K.</h4>
+                  <span>Recovered from Bipolar Disorder</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-nav">
+          <button class="nav-dot active" data-slide="0"></button>
+          <button class="nav-dot" data-slide="1"></button>
+          <button class="nav-dot" data-slide="2"></button>
+          <button class="nav-dot" data-slide="3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Mindful Journey</h3>
+            <p>Breaking the stigma, building hope, one step at a time.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="Twitter">🐦</a>
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="LinkedIn">💼</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#disorders">Mental Health Info</a></li>
+              <li><a href="#resources">Resources</a></li>
+              <li><a href="#appointments">Book Appointment</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#community">Community</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#testimonials">Stories</a></li>
+              <li><a href="#resources">Crisis Help</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Emergency</h4>
+            <p class="emergency-text">If you're in crisis, please call:</p>
+            <p class="emergency-number">988</p>
+            <p class="emergency-text">Available 24/7</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Mindful Journey. All rights reserved. | This website
+            provides informational resources and is not a substitute for
+            professional medical advice, diagnosis, or treatment.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-icon">✓</div>
+        <h2>Appointment Scheduled!</h2>
+        <p>
+          Thank you for taking this important step. We've received your
+          appointment request and will contact you within 24 hours to confirm
+          your session.
+        </p>
+        <button class="btn btn-primary" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
