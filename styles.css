@@ -242,6 +242,13 @@ body {
   line-height: 1.2;
 }
 
+
+.dark-purple {
+  background: none !important;
+  -webkit-text-fill-color: #4b0082 !important; /* deep purple */
+  color: #4b0082 !important;
+}
+
 .title-line {
   display: block;
   animation: slideInLeft 1s ease-out;
