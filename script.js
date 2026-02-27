@@ -5,8 +5,20 @@ const sections = Array.from(document.querySelectorAll("main section[id], header[
 const chips = Array.from(document.querySelectorAll(".chip"));
 const resourceCards = Array.from(document.querySelectorAll(".resource-card"));
 const accordionTriggers = Array.from(document.querySelectorAll(".accordion-trigger"));
-const supportForm = document.getElementById("supportForm");
+const tabButtons = Array.from(document.querySelectorAll(".tab-btn"));
+const testimonialCards = Array.from(document.querySelectorAll(".testimonial-card"));
+const testimonialDots = Array.from(document.querySelectorAll(".dot"));
+const appointmentForm = document.getElementById("appointmentForm");
 const formStatus = document.getElementById("formStatus");
+const appointmentDate = document.getElementById("appointmentDate");
+
+if (appointmentDate) {
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+  appointmentDate.setAttribute("min", `${yyyy}-${mm}-${dd}`);
+}
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
@@ -25,7 +37,7 @@ navLinks.forEach((link) => {
 });
 
 function updateActiveLink() {
-  const offset = window.scrollY + 140;
+  const offset = window.scrollY + 150;
   let currentId = "";
 
   sections.forEach((section) => {
@@ -54,8 +66,7 @@ function setChipState(targetChip) {
 function filterResources(category) {
   resourceCards.forEach((card) => {
     const cardCategories = card.dataset.category || "";
-    const isVisible =
-      category === "all" || cardCategories.split(" ").includes(category);
+    const isVisible = category === "all" || cardCategories.split(" ").includes(category);
     card.classList.toggle("is-hidden", !isVisible);
   });
 }
@@ -75,6 +86,60 @@ accordionTriggers.forEach((trigger) => {
     trigger.setAttribute("aria-expanded", String(isOpen));
   });
 });
+
+function setTab(targetId) {
+  tabButtons.forEach((button) => {
+    const selected = button.dataset.tab === targetId;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-selected", String(selected));
+  });
+
+  document.querySelectorAll(".tab-panel").forEach((panel) => {
+    panel.classList.toggle("active", panel.id === targetId);
+  });
+}
+
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setTab(button.dataset.tab);
+  });
+});
+
+let activeTestimonial = 0;
+let testimonialTimer;
+
+function showTestimonial(index) {
+  testimonialCards.forEach((card, cardIndex) => {
+    card.classList.toggle("active", cardIndex === index);
+  });
+  testimonialDots.forEach((dot, dotIndex) => {
+    dot.classList.toggle("active", dotIndex === index);
+  });
+  activeTestimonial = index;
+}
+
+function resetTestimonialTimer() {
+  if (testimonialTimer) {
+    window.clearInterval(testimonialTimer);
+  }
+  testimonialTimer = window.setInterval(() => {
+    const nextIndex = (activeTestimonial + 1) % testimonialCards.length;
+    showTestimonial(nextIndex);
+  }, 5000);
+}
+
+testimonialDots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    const index = Number(dot.dataset.index || 0);
+    showTestimonial(index);
+    resetTestimonialTimer();
+  });
+});
+
+if (testimonialCards.length > 0) {
+  showTestimonial(0);
+  resetTestimonialTimer();
+}
 
 function validateField(field) {
   const value = field.value.trim();
@@ -96,10 +161,8 @@ function validateField(field) {
   return valid;
 }
 
-if (supportForm) {
-  const fields = Array.from(
-    supportForm.querySelectorAll("input, select, textarea")
-  );
+if (appointmentForm) {
+  const fields = Array.from(appointmentForm.querySelectorAll("input, select, textarea"));
 
   fields.forEach((field) => {
     field.addEventListener("blur", () => validateField(field));
@@ -110,7 +173,7 @@ if (supportForm) {
     });
   });
 
-  supportForm.addEventListener("submit", (event) => {
+  appointmentForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const valid = fields.map((field) => validateField(field)).every(Boolean);
@@ -125,8 +188,8 @@ if (supportForm) {
     }
 
     formStatus.textContent =
-      "Request received. A support coordinator will follow up within one business day.";
-    supportForm.reset();
+      "Appointment request submitted. A coordinator will follow up with confirmation.";
+    appointmentForm.reset();
   });
 }
 
